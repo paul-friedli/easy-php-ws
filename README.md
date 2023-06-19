@@ -645,6 +645,21 @@ That's exactly the idea behind this set of classes : they try to do the boring a
     }
 ...
 ```
+Depending on the table content, calling this entry would produce JSON with this structure :
+```JSON
+[
+    {
+        "id": 108,
+        "msg_date": "2023-05-19 20:01:01",
+        "msg_content": "A new line with this unique identifier [ID649097dce3eba6.38192766]"
+    },
+    {
+        "id": 82,
+        "msg_date": "2023-05-19 17:06:22",
+        "msg_content": "This is data that already was inside the table before we executed the tests..."
+    }
+]
+```
 #### Explanations:
 Usage, mandatory and optional parameters are already explained in EasySQLSelect.php class file.
 
@@ -676,6 +691,14 @@ More will soon be done here...
         );
     }
 ...
+```
+Depending on the table content, calling this entry would produce JSON with this structure :
+```JSON
+{
+    "succeeded": true,
+    "created-pk": 108,
+    "error": null
+}
 ```
 #### Explanations:
 Usage, mandatory and optional parameters are already explained in EasySQLInsert.php class file.
@@ -715,6 +738,14 @@ More will soon be done here...
     }
 ...
 ```
+Depending on the table content, calling this entry would produce JSON with this structure :
+```JSON
+{
+    "succeeded": true,
+    "affected-rows-count": 1,
+    "error": null
+}
+```
 #### Explanations:
 Usage, mandatory and optional parameters are already explained in EasySQLUpdate.php class file.
 
@@ -746,6 +777,14 @@ More will soon be done here...
         );
     }
 ...
+```
+Depending on the table content, calling this entry would produce JSON with this structure :
+```JSON
+{
+    "succeeded": true,
+    "affected-rows-count": 1,
+    "error": null
+}
 ```
 #### Explanations:
 Usage, mandatory and optional parameters are already explained in EasySQLDelete.php class file.
