@@ -1,0 +1,19 @@
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+START TRANSACTION;
+
+DROP TABLE IF EXISTS `t_demo`;
+
+CREATE TABLE `t_demo` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `msg_date` datetime NOT NULL,
+  `msg_content` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+ALTER TABLE `t_demo` ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `t_demo`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+COMMIT;
