@@ -134,7 +134,6 @@ $myWebService = new class extends EasyWebService {
 $myWebService->execute();
 ?>
 ```
-> That's it ! **DEAD SIMPLE ! Really !** 👍
 
 ## How to retrieve `GET` parameters and/or `POST` payload when called ?
 **Super easy** and independent of the used protocol 😙 !
@@ -319,7 +318,7 @@ This  means that your overrides of `get()`, `put()`, `post()`, `delete()` ... wi
 
 The same said with a flowchart to make it clear :
 ```mermaid
-flowchart TD
+flowchart LR
     Start(["Start"])
     
     End(["End"])
@@ -549,7 +548,7 @@ This `easy-php-ws` library uses only what is natively provided by `PHP`. It does
 To install it on your web-server, simply copy `EasyWebService.php` (preferably within a `lib` folder). Then make your classes use it like demonstrated above.
 
 ## Configuration
-At the moment (v2.0.1), there is no need to be able to configure anything. Therefore nothing can be configured with this `easy-php-ws` library, except the [enabling or disabling of the internal debugging/logging feature](#debugging).
+At the moment (v2.0.2), there is no need to be able to configure anything. Therefore nothing can be configured with this `easy-php-ws` library, except the [enabling or disabling of the internal debugging/logging feature](#debugging).
 
 ## Debugging
 This `easy-php-ws` library provides a switch to enable or disable the internal debugging/logging feature.
@@ -566,7 +565,7 @@ define( 'EWS_DEBUGGING_FILENAME', 'ews_debug.txt' );
  This feature can be helpful in those cases where it is difficult to understand what is going on with a web-service entry point not working as expected.
 
 ## Running the tests
-Under `/tests/easy-php-ws/` folder lies the `run-all-tests.php` script meant to launch all testing machinery. It produces human readable HTML and is usefull to test to see if everything is working as expected, for example against new PHP versions, against new website settings, ...
+Under `/tests/easy-php-ws/` folder lies the `run-all-tests.php` script meant to launch all the testing machinery to verify that the library still works as expected. You can see it as a kind of "unit testing". It produces human readable HTML and is usefull to test to see if everything is working as expected, for example against new PHP versions, against new website settings, ...
 
 Simply first edit the `$WSHOME` variable on top of the `run-all-tests.php` script to make it point to **YOUR** test folder.
 ```PHP
